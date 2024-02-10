@@ -1,0 +1,49 @@
+/* In-Formed Drivers */
+/* By: Ruben Lopez */
+/* Simple styling for my Form */
+
+body {
+    font-family: monospace;
+    font-weight: 800;
+    background: #949393;
+    text-align: center;
+}
+
+h1 {
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 img {
+    width: 110px;
+    height: 80px;
+    vertical-align: middle;
+}
+
+.leftside{
+    top: 5%;
+    left: 170px;
+    width: 200px;
+}
+
+.rightside{
+    position: absolute;
+    top: 5%;
+    right: 100px;
+    width: 200px;
+}
+
+fieldset {
+    position: relative;
+    align-self: center;
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    font-size: 100%;
+}

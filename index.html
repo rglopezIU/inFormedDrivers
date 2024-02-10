@@ -1,0 +1,190 @@
+<!-- InFormed Drivers -->
+<!--By: Ruben Lopez -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Car</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        <!-- cool logo with header -->
+        <h1><img src="car-logo.gif" />Ideal Car</h1>
+    </header>
+
+    <!-- Form begins -->
+    <form id="sampleForm" action="#" method="get">
+        
+        <!-- begin first fieldset -->
+        <fieldset>
+            <legend>Vehicle Requirements</legend>
+            <div class="leftside">
+            <label for="manufacturer">Manufacturer</label>
+            <!-- size attributes for select field -->
+            <!-- Brand Options -->
+            <select 
+              id="manufacturer"
+              name="manufacturer"
+              size="6"
+              style="width: 160px"
+              multiple
+              >
+              <optgroup label="American Made">
+                <option value="chevy">Chevrolet</option>
+                <option value="ford">Ford</option>
+                <option value="cadillac">Cadillac</option>
+                <option value="buick">Buick</option>
+                <option value="dodge">Dodge</option>
+                <option value="gmc">GMC</option>
+                <option value="jeep">Jeep</option>
+              </optgroup>
+              
+              <optgroup label="Asian Made">
+                <option value="toyota">Toyota</option>
+                <option value="acura">Acura</option>
+                <option value="honda">Honda</option>
+                <option value="lexus">Lexus</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="genesis">Genesis</option>
+                <option value="kia">KIA</option>
+                <option value="mazda">Mazda</option>
+              </optgroup>
+
+              <optgroup label="European Made">
+                <option value="audi">Audi</option>
+                <option value="alfaRomeo">Alfa Romeo</option>
+                <option value="astonMartin">Aston Martin</option>
+                <option value="bmw">BMW</option>
+                <option value="fiat">Fiat</option>
+                <option value="landrover">Land Rover</option>
+              </optgroup>
+            </select>
+            </div>
+
+            <!-- Color Option -->
+            <div class="rightside">
+            <label for="carColor"> Vehicle Color
+                <input type="color" id="carColor" name="carColor" />
+            </label>
+            <br />
+
+            <!-- Drive Options -->
+            <br>
+            <h3>Drive Options</h3>
+            <input type="checkbox" id="2WD" name="option" value="2WD" />
+            <label for="2WD">2WD</label>
+            <input type="checkbox" id="AWD" name="option" value="AWD" />
+            <label for="AWD">AWD</label>
+            <input type="checkbox" id="FWD" name="option" value="FWD" />
+            <label for="FWD">FWD</label>
+            <br><br>
+
+            <!-- License field -->
+            <br><br>
+            <label for="license">License
+                <input
+                  type="text"
+                  id="license"
+                  name="license"
+                  placeholder="1234-56-7890"
+                  size="14"
+                  required
+                  minlength="10"
+                  maxlength="20"
+                  />
+            </label>
+            </div>
+            <br>
+
+            <!-- Comment Field -->
+            <br><br>
+            <div class="leftside">
+            <label for="comments">
+                Comments
+                <textarea
+                  id="comments"
+                  name="comments"
+                  >
+                  </textarea>
+            </label>
+            </div>
+
+        </fieldset>
+        <br>
+
+        <!-- Second Fieldset -->
+        <fieldset>
+            <legend>Additional Options</legend>
+
+            <!-- Mileage field -->
+            <div class="rightside">
+                <label for="miles">Mileage
+                </label><br/>
+                <input 
+                  type="range" 
+                  value="100000" 
+                  min="10000" 
+                  max="250000" 
+                  step="10000"
+                  oninput="this.nextElementSibling.value = this.value + ' or fewer'">
+                <output>100000 or fewer</output>
+            </div>
+
+            <!-- Body style -->
+            <div class="leftside">
+                <label for="bodyStyle">
+                    Body Style
+                </label><br/>
+                <input type="radio" id="suvCrossover" name="body" value="suvCrossover" />
+                <label for="suvCrossover">
+                    SUV/Crossover
+                </label>
+
+                <input type="radio" id="sedan" name="body" value="sedan" />
+                <label for="sedan">
+                    Sedan
+                </label>
+
+                <input type="radio" id="pickup" name="body" value="pickup" />
+                <label for="pickup">
+                    Pickup Truck
+                </label>
+
+                <input type="radio" id="coupe" name="body" value="coupe" />
+                <label for="coupe">
+                    Coupe
+                </label>
+
+                <input type="radio" id="hatchback" name="body" value="hatchback" />
+                <label for="hatchback">
+                    Hatchback
+                </label>
+
+                <input type="radio" id="wagon" name="body" value="wagon" />
+                <label for="wagon">
+                    Wagon
+                </label><br>
+
+                <input type="radio" id="convertible" name="body" value="convertible" />
+                <label for="convertible">
+                    Convertible
+                </label>
+
+                <input type="radio" id="minivan" name="body" value="minivan" />
+                <label for="minivan">
+                    Minivan
+                </label>
+
+            </div>
+        </fieldset>
+        <br/>
+
+        <!-- Submit Button -->
+        <input type="submit" id="process" />
+
+    </form>
+</body>
+</html>
